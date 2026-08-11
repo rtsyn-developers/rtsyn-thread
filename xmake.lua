@@ -51,7 +51,9 @@ on_load(function(target)
 	target:add("files", path.join("src", "thread", "core", backend .. ".c"))
 end)
 
-local rtsyn_modules = {}
+local rtsyn_modules = {
+	{ name = "thread", path = "thread" },
+}
 
 if has_config("tests") then
 	for _, rtsyn_module in ipairs(rtsyn_modules) do
